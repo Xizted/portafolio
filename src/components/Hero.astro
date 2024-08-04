@@ -1,0 +1,36 @@
+---
+import { Button } from '@nextui-org/react';
+---
+
+<main
+  class='md:text-center flex md:justify-center md:items-center flex-col z-10'
+>
+  <div class='md:w-1/2 pt-40'>
+    <h1 class='text-6xl font-semibold mb-6'>
+      Hello 👋, I'm a Frontend Developer
+    </h1>
+    <p class='text-xl font-medium text-foreground-400 mb-6'>
+      As a frontend developer, I specialize in creating responsive and
+      interactive user interfaces using the latest web technologies such as
+      HTML, CSS, and JavaScript. I have a strong passion for building
+      high-quality, visually appealing, and user-friendly websites and web
+      applications
+    </p>
+
+    <Button id="download-cv" size='lg' client:visible color='primary' variant='shadow'>
+      Download CV!</Button
+    >
+  </div>
+</main>
+
+<script>
+  const btn = document.querySelector('#download-cv');
+
+
+
+  btn?.addEventListener('click', () => {
+    window.open('/CV.pdf', '_blank');
+  });
+
+
+</script>
